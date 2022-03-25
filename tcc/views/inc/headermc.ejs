@@ -1,0 +1,65 @@
+
+    <nav class="navbar navbar-expand-md navbar-dark" role="navigation" style="background-image: url(images/menu2.jpeg)">
+      <div class="gtco-container">
+        <div class="menuuser col-lg-12">
+            <div class="usuario col-lg-4 col-md-8">	
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                            <li class="dropdown">
+                                <!-- Menu Toggle Button -->
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <!-- The user image in the navbar-->
+                                    <img src="/<%= user.photo %>" class="user-image img-center" alt="User Image">
+                                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                <span class="hidden-xs"><h4>Olá, <%= user.name %></h4></span><%= user.email %>
+                                </a>
+                                <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+                                <li class="user-header text-center text-light">
+                                    <img src="/<%= user.photo %>" alt="User Image" width="90px">
+                                    <p><%= user.name %> você tem<small><div class="cursive-font text-light display-2"><%= user.score %> Pontos</div></small></p>
+                                </li>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                            <div class="pull-left">
+                                <a href="#" class="btn btn-default btn-flat text-success">Perfil</a>
+                            </div>
+                            <div class="pull-right">
+                                <a href="/logout" class="btn btn-default btn-flat text-success">Sair</a>
+                            </div>
+                            </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse col-lg-8 col-md-8" id="navbarCollapse">
+                <div class="col-xs-8 text-right menu-1">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/services">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/menus">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/menuspremios">Prêmios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/reservations">Agende</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/contacts">Contatos</a>
+                        </li>
+                    </ul>	          
+                </div>
+            </div>
+        </div>
+      </div>
+    </nav>
+
+ 

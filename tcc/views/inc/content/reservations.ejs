@@ -1,0 +1,137 @@
+<div class="gtco-section" style="padding-bottom: 14em;">
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-8 animate-box">
+                    <% if (typeof error === "string") {%>
+                    <div class="alert alert-danger">
+                        <%= error %>
+                    </div>
+                    <% } %>
+
+                    <% if (typeof success === "string") {%>
+                        <div class="alert alert-success">
+                            <%= success %>
+                        </div>
+                        <% } %>
+                <h3>Se tiver muita coisa para coletar, nós pegamos para você!</h3>
+                <form action="/reservations" method="POST">
+                    <div class="row form-group">
+                        <div class="col-md-9">
+                            <label for="inputItem">Selecione o Ítem</label>
+                            <select id="inputItem" name="item" class="form-control" value="<%= body.item %>">
+                                <option value=""> -- selecione -- </option>
+                                <option <% if(body.item == 1) {%>selected<%} %> value="1">Sofá</option>
+                                <option <% if(body.item == 2) {%>selected<%} %> value="2">Cama</option>
+                                <option <% if(body.item == 3) {%>selected<%} %> value="3">Armário</option>
+                                <option <% if(body.item == 4) {%>selected<%} %> value="4">Mesa</option>
+                                <option <% if(body.item == 5) {%>selected<%} %> value="5">Guarda Roupa</option>
+                            </select>
+                        </div>
+                    
+                            <div class="col-md-3">
+                                <label for="inputItem">Quantidade</label>
+                                <select id="inputItem" name="qtd_item" class="form-control" value="<%= body.qtd_item %>">
+                                    <option value=""> -- selecione -- </option>
+                                    <option <% if(body.qtd_item == 1) {%>selected<%} %> value="1">1</option>
+                                    <option <% if(body.qtd_item == 2) {%>selected<%} %> value="2">2</option>
+                                    <option <% if(body.qtd_item == 3) {%>selected<%} %> value="3">3</option>
+                                    <option <% if(body.qtd_item == 4) {%>selected<%} %> value="4">4</option>
+                                    <option <% if(body.qtd_item == 5) {%>selected<%} %> value="5">5+</option>
+                                </select>
+                            </div>
+                        </div>
+
+                       <div class="row form-group">
+                        <div class="col-md-12">
+                            <label for="inputName">Nome de quem vai receber o Motorista</label>
+                            <input type="text" id="inputName" name="name" class="form-control" value="<%= body.name %>">
+                        </div>
+                    </div>
+                
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label for="inputPhone">Telefone</label>
+                            <input type="phone" id="inputPhone" name="phone" class="form-control" value="<%= body.phone %>">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <label for="inputUf">Estado</label>
+                            <select id="inputUf" name="uf" class="form-control" value="<%= body.uf %>">
+                                <option value=""> -- selecione -- </option>
+                                <option <% if(body.qtd_item == 1) {%>selected<%} %> value="DF">Distrito Federal</option>
+                                <option <% if(body.qtd_item == 1) {%>selected<%} %> value="GO">Entorno</option>
+                            </select>
+                        </div>
+                   
+                        <div class="col-md-8">
+                            <label for="inputCity">Cidade</label>
+                            <select id="inputCity" name="city" class="form-control" value="<%= body.city %>">
+                                <option value=""> -- selecione -- </option>
+                                <option <% if(body.qtd_item == 1) {%>selected<%} %> value="Brasilia">Brasilia</option>
+                                <option <% if(body.qtd_item == 1) {%>selected<%} %> value="Aguas Claras">Águas Claras</option>
+                                <option <% if(body.qtd_item == 1) {%>selected<%} %> value="Taguatinga">Taguatinga</option>
+                                <option <% if(body.qtd_item == 1) {%>selected<%} %> value="Braslandia">Braslandia</option>
+                                <option <% if(body.qtd_item == 1) {%>selected<%} %> value="Gama">Gama</option>
+                                <option <% if(body.qtd_item == 1) {%>selected<%} %> value="Guara">Guara</option>
+                                <option <% if(body.qtd_item == 1) {%>selected<%} %> value="Samambaia">Samambaia</option>
+                                <option <% if(body.qtd_item == 1) {%>selected<%} %> value="Santa Maria">Santa Maria</option>
+                                <option <% if(body.qtd_item == 1) {%>selected<%} %> value="Valparaiso">Valparaiso</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-9">
+                            <label for="inputAddress">Endereço</label>
+                            <input type="address" id="inputAddress" name="address" class="form-control" value="<%= body.address %>">
+                        </div>
+                    
+                        <div class="col-md-3">
+                            <label for="inputNumber">Número</label>
+                            <input type="number" id="inputnumber" name="number" class="form-control" value="<%= body.number %>">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label for="inputZip">Cep</label>
+                            <input type="zip" id="inputZip" name="zip" class="form-control" value="<%= body.zip %>">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                            <label for="inputDate">Data</label>
+                            <input type="text" id="inputDate" name="date" class="form-control" value="<%= body.date %>">
+                        </div>
+                    
+                        <div class="col-md-6">
+                            <label for="inputTime">Hora</label>
+                            <input type="text" id="inputTime" name="time" class="form-control" value="<%= body.time %>">
+                        </div>
+                    </div>
+                
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-primary btn-block" value="Reservar Agora">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4 col-md-push-1 animate-box">
+                
+                <div class="gtco-contact-info">
+                    <h3>Informações de Contato</h3>
+                    <ul>
+                        <li class="address">Brasília - DF <br> UNIP</li>
+                        <li class="phone"><a href="tel://1234567890">61 9 1234 5678</a></li>
+                        <li class="email"><a href="max482@gmail.com">max482@gmail.com</a></li>
+                        <li class="email"><a href="hrsilvacosta@gmail.com">hrsilvacosta@gmail.com</a></li>
+                        <li class="email"><a href="angelica.ribeiro210@gmail.com">angelica.ribeiro210@gmail.com</a></li>
+                        <li class="url"><a href="https://www.unip.br">www.unip.br</a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

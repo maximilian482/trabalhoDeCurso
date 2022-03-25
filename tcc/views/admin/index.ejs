@@ -1,0 +1,126 @@
+<%- include("inc/header") -%>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>
+          Tela Inicial
+        </h1>
+        <ol class="breadcrumb">
+          <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+          <li class="active">Usuários</li>
+        </ol>
+      </section>
+
+      <!-- Main content -->
+<section class="content container-fluid">
+    <div class="col p-4 m-0 border">  
+      <div class="row row-lg-6 mr-auto p-3">
+
+       <div class="col-lg-12">
+        <div class="col-lg-4 col-md-6 text-center gtco-heading">
+          <div class="info-box" onclick="window.location.href = '/admin/reservations'" style="cursor:pointer"> 
+            <h2 id="hfonte" class><%= data.nrreservations %></h2>
+            <p>Agendamento Coletas</p>
+              <div class="icon-us">
+                <i class="ion ion-ios-calendar"></i>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-center gtco-heading">
+          <div class="info-box" onclick="window.location.href = '/admin/menus'" style="cursor:pointer"> 
+            <h2 id="hfonte" class><%= data.nrstuff %></h2>
+            <p>Edite Produtos</p>
+              <div class="icon-us">
+                <i class="fas fa-recycle"></i>
+              </div>
+          </div>
+        </div>  
+      
+        <div class="col-lg-4 col-md-6 text-center gtco-heading">
+          <div class="info-box" onclick="window.location.href = '/admin/users'" style="cursor:pointer"> 
+            <h2 id="hfonte" class><%= data.nrusers %></h2>
+            <p>Administradores</p>
+              <div class="icon-us">
+              <i class="fas fa-user-shield"></i>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="col-lg-4 col-md-6 text-center gtco-heading">
+          <div class="info-box" onclick="window.location.href = '/admin/menuspremios'" style="cursor:pointer"> 
+            <h2 id="hfonte" class><%= data.nraward %></h2>
+            <p>Edite Prêmios</p>
+              <div class="icon-us">
+                <i class="fas fa-trophy"></i>
+              </div>
+          </div>
+        </div>
+      
+      
+        <div class="col-lg-4 col-md-6 text-center gtco-heading">
+          <div class="info-box" onclick="window.location.href = '/admin/users2'" style="cursor:pointer"> 
+            <h2 id="hfonte" class><%= data.nrusers2 %></h2>
+            <p>Usuários</p>
+              <div class="icon-us">
+                <i class="ion ion-ios-people-outline"></i>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-center gtco-heading">
+          <div class="info-box" onclick="window.location.href = '/admin/emails'" style="cursor:pointer"> 
+            <h2 id="hfonte" class><%= data.nremails %></h2>
+            <p>E-mails</p>
+              <div class="icon-us">
+                <i class="fas fa-envelope" ></i>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="col-lg-4 col-md-6 text-center gtco-heading">
+          <div class="info-box" onclick="window.location.href = '/admin/contacts'" style="cursor:pointer"> 
+            <h2 id="hfonte" class><%= data.nrcontacts %></h2>
+            <p>Contatos</p>
+              <div class="icon-us">
+                <i class="ion ion-ios-chatboxes"></i>
+              </div>
+          </div>
+        </div>
+      </div>
+            
+
+      </div>  
+    
+</div>
+
+
+  
+<%- include("inc/footer") -%>
+
+<style>
+  .icon-us {
+	  font-size: 50px;
+	
+  }
+
+  .icon-us i:hover {
+	font-size: 70px;
+  }
+
+  #hfonte {
+	color: rgb(88, 47, 47);
+	font-size: 40px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-top: 15px;
+  }
+
+
+  
+</style>

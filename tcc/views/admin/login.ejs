@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>+ Coleta</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <meta name="author" content="" />
+  <meta name="theme-color" content="#3c8dbc">
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+
+<body class="hold-transition">
+  <a href="#"><img src="/images/coleta3.png"></a>
+  <div class="login-box text-center">
+    <div class="login-logo text-center">
+      
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+      <p class="login-box-msg"><b>Acesso a Administradores</b></p>
+
+      <% if (typeof error === "string") {%>
+        <div class="alert alert-info">
+            <%= error %>
+        </div>
+        <% } %>
+
+        <% if (typeof success === "string") {%>
+            <div class="alert alert-success">
+                <%= success %>
+            </div>
+            <% } %>
+
+      <form method="post">
+        <div class="form-group has-feedback">
+          <input name="email" type="email" class="form-control" placeholder="E-mail"  value="<%= body.email%>">
+          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback">
+          <input name="password" type="password" class="form-control" placeholder="Senha">
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Lembre-me
+          </label>
+        </div>
+        <p class="forgot"><a href="EsqueciASenha.html"> ESQUECI A MINHA SENHA </p>
+
+          <!--
+          <p>Logo estará disponível para
+            <a href="" class="btn btn-outline-light">
+              <i class="fab fa-android fa-lg"></i></a>
+            <a href="" class="btn btn-outline-light">
+              <i class="fab fa-apple"></i>
+            </a>
+          </p>  
+          -->
+        <div class="row">
+          <!-- /.col -->
+          <div class="col-xs-4">
+            <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+    </div>
+    <!-- /.login-box-body -->
+  </div>
+  <!-- /.login-box -->
+
+  <!-- jQuery 3 -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap 3.3.7 -->
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <style>
+
+body {
+  background-color: #D2FFD2;
+}
+
+img {
+  position: absolute;
+  text-align: center;
+  left: 10%;
+  top: -120px;
+  width: 550px;
+  opacity: 60px;
+}
+
+.login-box {
+  padding-top: 150px;
+}
+
+a {
+    color: #1C6434;
+  }
+
+  .btn {
+    background: #1C6434;
+  }
+
+  .btn:hover{
+
+    text-decoration: none;
+    background: #1C6434;
+  }
+
+  .img {
+    padding-top: 200px;
+  }
+
+  </style>
+</body>
+
+</html>
